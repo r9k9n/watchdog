@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Privacy policy for the Watchdog Chrome extension. Watchdog runs on your device and does not collect or transmit your data.">
+<title>Watchdog Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+  /* Layout: one reading column, mono section labels like an instrument log, cobalt as the only ink */
+  :root {
+    --bg: #E7E8EE; --card: #FFFFFF; --ink: #14163D; --muted: #5B5E85; --faint: #7F82A8; --hair: #D5D7E3; --accent: #2B2FD9; --soft: #8F93EE;
+    --sans: "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: "Geist Mono", ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #0E0F2E; --card: #161842; --ink: #E9EAFB; --muted: #AEB1DA; --faint: #8C8FC0; --hair: #2A2D63; --accent: #8E93FF; --soft: #5F64C9; color-scheme: dark } }
+  :root[data-theme="dark"] {
+    --bg: #0E0F2E; --card: #161842; --ink: #E9EAFB; --muted: #AEB1DA; --faint: #8C8FC0; --hair: #2A2D63; --accent: #8E93FF; --soft: #5F64C9; color-scheme: dark }
+  body { background: var(--bg); color: var(--ink); font: 400 16.5px/1.65 var(--sans); -webkit-font-smoothing: antialiased; padding-inline: 20px; }
+  main { max-width: 700px; margin: 0 auto; padding-block: 48px 72px; display: flex; flex-direction: column; gap: 0; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 19px; letter-spacing: -0.02em; }
+  .brand svg { width: 22px; height: 22px; fill: var(--accent); }
+  .eyebrow { margin-top: 56px; font: 500 11.5px/1.3 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+  h1 { font-weight: 500; font-size: clamp(34px, 7vw, 52px); line-height: 1.04; letter-spacing: -0.035em; margin: 14px 0 18px; color: var(--accent); text-wrap: balance; }
+  h1 span { color: var(--soft); }
+  .lead { font-size: 18px; color: var(--muted); margin: 0 0 36px; max-width: 62ch; }
+  .summary { position: relative; background: var(--card); border: 1px solid var(--hair); border-radius: 2px; padding: 20px 22px; margin-bottom: 20px; }
+  .summary p { margin: 0; }
+  .plus { position: absolute; top: -1px; right: -1px; width: 16px; height: 16px; background: var(--accent); }
+  .plus::before, .plus::after { content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: var(--bg); }
+  .plus::before { width: 8px; height: 1.5px; } .plus::after { width: 1.5px; height: 8px; }
+  section { border-top: 1px solid var(--hair); padding-top: 22px; margin-top: 28px; }
+  h2 { display: flex; gap: 12px; align-items: baseline; margin: 0 0 12px; font: 500 12px/1.3 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink); }
+  h2 b { font-weight: 500; color: var(--accent); }
+  p { margin: 0 0 12px; max-width: 65ch; }
+  ul { margin: 0 0 12px; padding-left: 20px; } li { margin-bottom: 6px; }
+  .tbl { overflow-x: auto; margin: 6px 0 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 420px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 14px 10px 0; border-bottom: 1px solid var(--hair); }
+  th { font: 500 10.5px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--faint); }
+  code { font: 400 14px var(--mono); color: var(--accent); }
+  .contact { display: inline-flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .addr { font: 400 15px var(--mono); user-select: all; }
+  button { font: 500 12px var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--accent); background: transparent; border: 1px solid var(--accent); border-radius: 2px; padding: 5px 10px; cursor: pointer; }
+  button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  footer { margin-top: 48px; font: 400 11.5px var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--faint); display: flex; gap: 8px; align-items: center; }
+  footer::before { content: ""; width: 7px; height: 7px; background: var(--accent); }
+</style>
+<style>*{box-sizing:border-box}body{margin:0}</style>
+</head>
+<body>
+
+<main>
+  <div class="brand"><svg viewBox="0 0 100 100" aria-hidden="true"><path d="M0 0H44V44A44 44 0 0 1 0 88Z"/><path d="M56 12H100V56A44 44 0 0 1 56 100V72A16 16 0 0 0 72 56H56Z"/></svg>Watchdog</div>
+
+  <div class="eyebrow">Privacy policy · Effective 4 October 2026</div>
+  <h1>Your chats stay <span>on your device.</span></h1>
+  <p class="lead">Watchdog is a Chrome extension that flags possible manipulative patterns in AI chat replies. This page explains what it reads, what it keeps, and what it never does.</p>
+
+  <div class="summary"><span class="plus" aria-hidden="true"></span><p><strong>In short:</strong> Watchdog does not collect, sell or share your data. Every check runs inside your browser. Nothing you type or read is sent to Watchdog or to anyone else. There are no accounts, no analytics and no tracking.</p></div>
+
+  <section>
+    <h2><b>01</b>What Watchdog reads</h2>
+    <p>On the supported chat sites (chatgpt.com, chat.openai.com, gemini.google.com and copilot.microsoft.com), Watchdog reads the messages shown on the page so its on-device rules can check the replies. It does not run on any other website.</p>
+    <p>This happens in your browser's memory, on your device. The conversation is not copied to a server, uploaded or logged anywhere outside your browser.</p>
+  </section>
+
+  <section>
+    <h2><b>02</b>What Watchdog keeps on your device</h2>
+    <p>Watchdog saves a small amount of information in Chrome's local extension storage. It never leaves your computer.</p>
+    <div class="tbl"><table>
+      <tr><th>What</th><th>Why</th></tr>
+      <tr><td>Settings: language, which sites to watch, sensitivity per category</td><td>So your choices are kept</td></tr>
+      <tr><td>Findings you marked "Not a problem"</td><td>So they stay dismissed</td></tr>
+      <tr><td>A history of findings: category, date, site, the chat's page address, and for changed edits a short phrase that was removed or added</td><td>To build your weekly report</td></tr>
+      <tr><td>The finding you selected, and a second-opinion reply, while your browser is open</td><td>To show the evidence in the side panel</td></tr>
+    </table></div>
+    <p>You can delete the history at any time with <strong>Clear local history</strong> in the weekly report. Removing the extension deletes everything it stored.</p>
+  </section>
+
+  <section>
+    <h2><b>03</b>What Watchdog never does</h2>
+    <ul>
+      <li>It does not send chat content, findings or settings to Watchdog or any third party.</li>
+      <li>It does not use analytics, advertising, cookies or tracking of any kind.</li>
+      <li>It does not sell, rent or transfer user data.</li>
+      <li>It does not send messages for you. "Get a neutral answer" places a question in the chat's message box, and you decide whether to send it.</li>
+      <li>It does not load remote code. All of its code and fonts are bundled in the extension.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><b>04</b>When you act</h2>
+    <p><strong>Neutral answer.</strong> If you send the question Watchdog placed in the message box, it goes to the AI assistant you are using, like any message you type. That assistant's own privacy policy applies to it.</p>
+    <p><strong>Copy and share.</strong> When you click a copy button, Watchdog writes text to your clipboard. The weekly summary is copied only after you review it, and Watchdog posts nothing anywhere.</p>
+    <p><strong>On-device second look.</strong> If your version of Chrome offers its built-in on-device model and you ask for a second look, the check runs on your device through Chrome.</p>
+  </section>
+
+  <section>
+    <h2><b>05</b>Permissions and why they are needed</h2>
+    <div class="tbl"><table>
+      <tr><th>Permission</th><th>Used for</th></tr>
+      <tr><td><code>storage</code></td><td>Saving the settings and history described above</td></tr>
+      <tr><td><code>sidePanel</code></td><td>Showing the evidence for a finding in Chrome's side panel</td></tr>
+      <tr><td><code>activeTab</code></td><td>Letting the toolbar popup show findings for the tab you are viewing</td></tr>
+      <tr><td><code>clipboardWrite</code></td><td>Copying text when you click a copy button</td></tr>
+      <tr><td>Access to the four chat sites</td><td>Reading the conversation so the on-device checks can run</td></tr>
+    </table></div>
+  </section>
+
+  <section>
+    <h2><b>06</b>Accuracy</h2>
+    <p>Findings come from on-device rules. They are estimates, not proof of intent, and they can be wrong. You can mark any finding as "Not a problem".</p>
+  </section>
+
+  <section>
+    <h2><b>07</b>Changes</h2>
+    <p>If this policy changes, the new version will be posted here with a new effective date. Watchdog will not start collecting data without asking you first.</p>
+  </section>
+
+  <section>
+    <h2><b>08</b>Contact</h2>
+    <p>Questions about privacy:</p>
+    <div class="contact"><span class="addr" id="addr">rakanalkhattabi@gmail.com</span><button type="button" id="copy">Copy</button></div>
+  </section>
+
+  <footer>Chat content is not sent to Watchdog servers</footer>
+</main>
+<script>
+  document.getElementById("copy").addEventListener("click", function () {
+    var b = this, a = document.getElementById("addr").textContent;
+    var done = function () { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1600); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(a).then(done).catch(function () { var r = document.createRange(); r.selectNodeContents(document.getElementById("addr")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); });
+  });
+</script>
+
+</body>
+</html>
